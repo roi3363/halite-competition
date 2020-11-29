@@ -53,7 +53,6 @@ def train_ship(
     return model
 
 
-
 def generate_examples(
     num_examples,
     neighborhood_shape=(5, 5),
