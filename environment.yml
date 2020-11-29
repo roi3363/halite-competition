@@ -1,0 +1,13 @@
+name: halite-competition
+
+
+dependencies:
+  - python
+  - tensorflow
+  - ipython
+  - pip
+
+  - pip:
+      - kaggle-environments
+      - numpy
+      - requests

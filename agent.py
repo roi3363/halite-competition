@@ -1,5 +1,6 @@
 from random import choice
-from kaggle_environments.envs.halite.helpers import *
+from kaggle_environments.envs.halite.helpers import Board, ShipAction
+
 
 def agent(obs, config):
     board = Board(obs, config)
@@ -7,7 +8,13 @@ def agent(obs, config):
 
     # Set actions for each ship
     for ship in me.ships:
-        ship.next_action = choice([ShipAction.NORTH, ShipAction.EAST, ShipAction.SOUTH, ShipAction.WEST, None])
+        ship.next_action = choice([
+            ShipAction.NORTH,
+            ShipAction.EAST,
+            ShipAction.SOUTH,
+            ShipAction.WEST,
+            None
+        ])
 
     # Set actions for each shipyard
     for shipyard in me.shipyards:
